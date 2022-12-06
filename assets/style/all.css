@@ -1,0 +1,392 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a {
+  font-weight: 800;
+  color: black;
+  text-decoration: none; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif; }
+
+.swiper {
+  width: 90%; }
+
+.image__wrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; }
+
+.image__wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top; }
+
+.Banner {
+  -webkit-box-flex: .2;
+      -ms-flex: .2;
+          flex: .2; }
+
+.header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .header .nav {
+    -webkit-box-flex: .7;
+        -ms-flex: .7;
+            flex: .7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 2; }
+    .header .nav li {
+      gap: 2; }
+  .header .login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .header .login .search .search-icon img {
+      width: 25px; }
+    .header .login ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+
+.Bible {
+  gap: 20px;
+  padding: 64px 80px; }
+  .Bible .container .row .col-6 {
+    width: 1296px;
+    height: 253px;
+    margin: 20px;
+    position: relative;
+    background-image: url("https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/Daily%201920.png?raw=true");
+    border-radius: 16px;
+    margin-top: 20px; }
+    .Bible .container .row .col-6 .title {
+      position: absolute;
+      width: 128px;
+      height: 52px;
+      left: 32px;
+      top: 32px;
+      padding: 8px 16px;
+      gap: 8px;
+      font-family: 'Noto Sans TC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      /* identical to box height, or 150% */
+      /* Line */
+      color: #DFEBE0;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 32px; }
+    .Bible .container .row .col-6 .PostContent {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      text-align: end;
+      color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 100%; }
+      .Bible .container .row .col-6 .PostContent .mainContent {
+        font-weight: bolder;
+        font-size: 40px;
+        line-height: 48px; }
+      .Bible .container .row .col-6 .PostContent .subItem {
+        color: #C0FFC8;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px; }
+
+.About {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .About .container .row .col {
+    margin-bottom: 25px; }
+    .About .container .row .col p {
+      color: #8A8B8A; }
+    .About .container .row .col .about-img-news {
+      margin-bottom: 10px;
+      position: relative;
+      border-radius: 10px;
+      height: 250px;
+      width: 100%;
+      background-size: contain;
+      background-size: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center top;
+         object-position: center top;
+      background-image: url("https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/New%2002.png?raw=true"); }
+      .About .container .row .col .about-img-news .text {
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 12px;
+        font-weight: bolder;
+        color: white;
+        background-color: #18A7A9;
+        padding: 8px;
+        width: 80px;
+        left: 10px;
+        top: 10px; }
+    .About .container .row .col .about-img-info {
+      margin-bottom: 10px;
+      background-image: url("https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/New%2001.png?raw=true");
+      position: relative;
+      border-radius: 10px;
+      height: 250px;
+      width: 100%;
+      background-size: contain;
+      background-size: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center top;
+         object-position: center top; }
+      .About .container .row .col .about-img-info .text {
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 12px;
+        width: 80px;
+        font-weight: bolder;
+        color: white;
+        padding: 8px;
+        background-color: #18A7A9;
+        left: 10px;
+        top: 10px; }
+    .About .container .row .col .about-img-active {
+      margin-bottom: 10px;
+      background-image: url("https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/New%2003.png?raw=true");
+      position: relative;
+      border-radius: 10px;
+      height: 250px;
+      width: 100%;
+      background-size: contain;
+      background-size: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center top;
+         object-position: center top; }
+      .About .container .row .col .about-img-active .text {
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 12px;
+        font-weight: bolder;
+        color: white;
+        background-color: #18A7A9;
+        width: 80px;
+        padding: 8px;
+        left: 10px;
+        top: 10px;
+        color: white; }
+    .About .container .row .col .caption {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 34px;
+      color: #1E1E1E;
+      margin-bottom: 10px; }
+  .About .capion {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #1E1E1E; }
+  .About .readMore {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #18A7A9;
+    text-align: end; }
+
+.History {
+  height: 450px; }
+  .History .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #1E1E1E;
+    margin-bottom: 45px; }
+  .History .container {
+    height: 100%; }
+    .History .container .row .col .title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      color: #18A7A9; }
+    .History .container .row .col .story {
+      position: relative; }
+      .History .container .row .col .story .img {
+        height: 150px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #DFEBE0; }
+        .History .container .row .col .story .img img {
+          position: absolute;
+          top: 0;
+          border-radius: 10px;
+          background-size: contain;
+          background-size: cover;
+          -o-object-fit: cover;
+             object-fit: cover;
+          -o-object-position: center top;
+             object-position: center top; }
+        .History .container .row .col .story .img .text {
+          position: absolute;
+          bottom: 0; }
+
+.WelcomeCard {
+  padding: 35px; }
+  .WelcomeCard .container {
+    margin: 15px; }
+    .WelcomeCard .container .row .col {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .WelcomeCard .container .row .col .title {
+        -webkit-box-flex: 2;
+            -ms-flex: 2;
+                flex: 2;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        color: #1F5B54; }
+      .WelcomeCard .container .row .col .form {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        padding: 5px; }
+        .WelcomeCard .container .row .col .form input {
+          margin-bottom: 20px;
+          padding: 8px 16px;
+          gap: 16px;
+          width: 416px;
+          height: 48px;
+          background: #FFFFFF;
+          border: 2px solid #DFEBE0;
+          border-radius: 16px; }
+        .WelcomeCard .container .row .col .form div {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: end;
+              -ms-flex-align: end;
+                  align-items: flex-end;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: end; }
+          .WelcomeCard .container .row .col .form div .btn-joinUs {
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end;
+            text-align: end;
+            padding: 5px;
+            padding: 12px 24px;
+            gap: 8px;
+            width: 116px;
+            height: 52px;
+            background: #18A7A9;
+            border: 1px solid #18A7A9;
+            border-radius: 16px; }
+
+.footer .info-rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .footer .info-rows div .fb-frame iframe {
+    border-radius: 16px; }
+
+.copyright {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* Gray 03 */
+  color: #BEC2BD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+/*# sourceMappingURL=all.css.map */
