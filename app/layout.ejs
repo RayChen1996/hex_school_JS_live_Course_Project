@@ -24,14 +24,14 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-2">
+        <div class="col-4 logo">
           <div class="logo">
             <div class="search-icon">
               <img src="https://raw.githubusercontent.com/RayChen1996/js_hex_project-seed-church/main/images/Logo.png"    >
              </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-8 menu">
           <ul class="nav">
             <li><a href="#">參加主日</a> </li>
             <li><a href="#">啟發課程</a> </li>
@@ -40,8 +40,21 @@
             <li><a href="#">代禱奉獻</a> </li>
           </ul>
         </div>
-        <div class="col-md-2">
-          <div class="login">
+        <div class="col-2 search">
+
+          <ul>
+            <li>
+              <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/Property%201=Search@2x.png?raw=true"  >
+            </li>
+            <li>
+              <input type="button" class="login" value="登入">
+            </li>
+            <li>
+              <input type="button" class="join" value="加入我們">
+            </li>
+          </ul>
+
+          <!-- <div class="login">
             <div class="search">
               <div class="search-icon">
                   <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/Property%201=Search@2x.png?raw=true"  >
@@ -51,30 +64,55 @@
               <li>登入</li>
               <li>加入我們</li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
 
-  
 
-
-  
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <span >進入豐盛，進入神所為您預備的命定</span>
+        <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/BN%201920.png?raw=true" class="d-block w-100" alt="...">
+        <ul class="pageScroll">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>      
+      </div>
+      <div class="carousel-item">
+        <span >進入豐盛，進入神所為您預備的命定</span>
+        <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/BN%201920.png?raw=true" class="d-block w-100" alt="...">
+        <!-- <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/istockphoto-875499574-612x612.jpg?raw=true" class="d-block w-100" alt="..."> -->
+        <ul class="pageScroll">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul> 
+      </div>
+      <div class="carousel-item">
+        <span >進入豐盛，進入神所為您預備的命定</span>
+        <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/BN%201920.png?raw=true" class="d-block w-100" alt="...">
+        <!-- <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/jon-tyson--0o9dgxEu5Q-unsplash.jpg?raw=true" class="d-block w-100" alt="..."> -->
+        <ul class="pageScroll">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul> 
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -82,13 +120,17 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/BN%201920.png?raw=true" class="d-block w-100" alt="...">
+        <img class="d-block w-100" src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/BN%201920.png?raw=true" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/BN%201920.png?raw=true" class="d-block w-100" alt="...">
+        <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/BN%201920.png?raw=true" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>...</h5>
+          <p>...</p>
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/BN%201920.png?raw=true" class="d-block w-100" alt="...">
+        <img class="d-block w-100" src="..." alt="Third slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -99,7 +141,8 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+  </div> -->
+
 
 
 
@@ -164,6 +207,11 @@
             </div>
            </div>
 
+           <ul class="pageScroll">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul> 
 
         </div>
         <div class="col-3">
@@ -252,16 +300,72 @@
     <div class="title">
       種子教會歷程
     </div>
+
+
     <div class="container">
       <div class="row">
+
+
         <div class="col">
           <div class="title">
             1988~2015
            </div>
+        </div>
+
+        <div class="col">
+           <div class="title">
+            2015~2017
+           </div>
+        </div>
+
+
+        <div class="col">
+            <div class="title">
+               2018~2022至今
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+        </div>
+
+        <div class="col-6">
+          <section class="timeline">
+            <ol>
+              <li></li>
+              <li></li> 
+              <li></li>
+              <li></li>
+            </ol>
+          </section>
+
+
+          
+        </div>
+
+
+        <div class="col">
+   
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
 
            <div class="story">
             <div class="img">
-              <img width="100%" src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/picture.png?raw=true" alt="" srcset="">
+              <img width="100%" src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/221127.jpg?raw=true" alt="" srcset="">
               <div class="text">
                 在台中中區公園路1號聖誕活動剪影
               </div>
@@ -275,13 +379,11 @@
         </div>
         <div  class="col">
           
-           <div class="title">
-            2015~2017
-           </div>
+
 
            <div class="story">
             <div class="img">
-              <img  width="100%"  src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/picture.png?raw=true" alt="" srcset="">
+              <img  width="100%"  src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_%E6%9E%97%E5%8D%9A%E5%A0%82%E7%89%A7%E5%B8%AB%E7%89%B9%E6%9C%8320170430_221127.jpg?raw=true" alt="" srcset="">
               <div class="text">
                 台中中區三民路一段170號暫時地方聚會
               </div>
@@ -294,9 +396,9 @@
 
         </div>
         <div class="col">
-          <div class="title">
+          <!-- <div class="title">
             2018~2022至今
-           </div>
+           </div> -->
 
            <div class="story">
             <div class="img">
@@ -328,6 +430,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-2">
+
 
 
         </div>
@@ -369,7 +472,7 @@
         <div class="logo">
           <img src="https://raw.githubusercontent.com/RayChen1996/js_hex_project-seed-church/main/images/Logo.png">
         </div>
-        <select name="" id="">
+        <select class="Lang" name="" id="">
           <option value="" selected>繁體中文</option>
           <option value="">英文</option>
           <option value="">簡體中文</option>
@@ -381,21 +484,30 @@
         <ul>
           <li>
             <div class="icon">
-
+              <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/Property%201=phone@2x.png?raw=true" alt="" srcset="">
             </div>
-            04-22259123
+            <div class="text">
+              04-22259123
+            </div>
+           
           </li>
           <li>
             <div class="icon">
-              
+              <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/Property%201=map@2x.png?raw=true" alt="" srcset="">
             </div>
-            台中市中區自由路二段六號十樓之２
+            <div class="text">
+              台中市中區自由路二段六號十樓之２
+            </div>
+            
           </li>
           <li>
             <div class="icon">
-              
+              <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/Property%201=mail@2x.png?raw=true" alt="" srcset="">
             </div>
-            ray.10315332@gmail.com
+            <div class="text">
+              ray.10315332@gmail.com
+            </div>
+            
           </li>
         </ul>
       </div>
