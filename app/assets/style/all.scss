@@ -24,6 +24,7 @@ body{
 }
 
 .carousel-item{
+  
   position: relative;
   span{
     font-size: 36px;
@@ -36,9 +37,10 @@ body{
  
   }
   .pageScroll{
+ 
     position: absolute;
     bottom: 10px;
-    left: 40%;
+    left: 45%;
     width: 120px;
     height: 25px;
  
@@ -46,12 +48,18 @@ body{
     display: flex;
     margin: 2px;
     justify-content: space-around;
-    li:first-child{
+    li.active{
       border-radius: 50%;
       background-color: #CBFEA9;
       width: 10px;
       height: 10px;
     }
+    // li:first-child{
+    //   border-radius: 50%;
+    //   background-color: #CBFEA9;
+    //   width: 10px;
+    //   height: 10px;
+    // }
     li{
       border-radius: 50%;
       background-color: #fff;
@@ -418,13 +426,14 @@ body{
           color: #18A7A9;
         }
         .story{
-          position: relative;
+          
           .img{ 
-            height: 150px; 
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 30px;
-            // text-align: center;
+   
+            position: relative;
+            height: 250px;
+            
+           
+            line-height: 30px; 
             color: #DFEBE0;
             img{
               position: absolute;
@@ -433,18 +442,28 @@ body{
    
               background-size: contain;
               background-size: cover;
-              // height: 50%;
+              height: 250px;
               object-fit: cover;
               object-position: center top;
             }
             .text{
               position: absolute;
+              // background-color: #1F5B54;
+              font-weight: 400;
+              font-size: 20px;
+              text-align: center;
+              width: 100%;
               bottom: 0;
             }
           }
 
 
         }
+
+        .descript{
+         margin-top: 15px;
+        }
+
 
       }
 
