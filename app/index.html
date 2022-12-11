@@ -66,57 +66,22 @@ current: index
         <img class="d-block w-100" src="..." alt="Third slide">
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    -->
+    <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
-    </a>
+    </a> -->
+    <!--  
   </div> -->
 
 
 
 
-
-  <!-- <div class="Banner">
-
-    <div class="container">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="image__wrapper">
-
-                      
-            <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/images/BN%201920.png?raw=true" alt="" />
-          </div>
-        </div>
-  
-        <div class="swiper-slide">
-          <div class="image__wrapper">
-            <h2>123</h2>
-            <img src="https://raw.githubusercontent.com/thatanjan/carousel-slider-swiper.js-yt/youtube/images/2.jpg" alt="" />
-          </div>
-        </div>
-  
-        <div class="swiper-slide">
-          <div class="image__wrapper">
-            <img src="https://raw.githubusercontent.com/thatanjan/carousel-slider-swiper.js-yt/youtube/images/3.jpg" alt="" />
-          </div>
-        </div>
-  
-       
-     
-      </div>
-  
-      <div class="swiper-pagination"></div>
-  
  
-    </div>
-  </div>
-
-  </div> -->
 
 
   <div class="Bible">
@@ -425,3 +390,23 @@ current: index
         
     </div>
   </div>
+
+
+  <script>
+ 
+    const swiper = new Swiper(".swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true
+    },
+    // keyboard: true,
+    mousewheel: false
+  });
+  
+  </script>

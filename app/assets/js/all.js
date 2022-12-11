@@ -1,42 +1,43 @@
 const BaseURl = `https://json-server-vercel-seven.vercel.app/`
+//https://json-server-vercel-a.vercel.app
 
+// const BaseURl = `http://localhost:3000/`
 const logo = document.querySelector(".logo");
-
-// $(document).on("load",() => {
-
-  //GET請求
-// axios.get(`${BaseURl}DailyBibles`)
-// .then( (response) => console.log(response))
-// .catch( (error) => console.log(error))
-
- 
+const expireMins = 30; //登入過期時間(分鐘)
+let IsLogin = false
 
 
+function ShowLoginMessage(user){
+
+
+  swal(`Hello ${user} Success`);
+}
+
+function CheckLogin(){
+  setInterval(function(){
+    if(IsLogin){
+      // Swal.fire(
+      //   '成功登入！',
+      //   '',
+      //   'success'
+      // )
+
+
+      Swal.fire({
+        title: '新增成功!',
+        text: '',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      })
+      $("ul.nav").show()
+    }else{
+
+
+      // $("ul.nav").hide()
+    }
+  },1000);
+}
 
 
 
-// axios.get(`${BaseURl}Historys`)
-// .then( (response) => console.log(response))
-// .catch( (error) => console.log(error))
-
-
-
-// axios.get(`${BaseURl}Schedules`)
-// .then( (response) => console.log(response))
-// .catch( (error) => console.log(error))
-
-
-
-//users
-
-// axios.get(`${BaseURl}users`)
-// .then( (response) => console.log(response))
-// .catch( (error) => console.log(error))
-
-
-//   setTimeout(function (){
-//     console.log("進入首頁吧")
-//  logo.click();
-//   },3000)
-
-// });
+CheckLogin()

@@ -29,3 +29,39 @@ function ActivityListInit(){
 }
 
 ActivityListInit();
+
+
+function renderActivityList(){
+    strHTML = ""
+    axios.get(`${BaseURl}Abouts`).then(function(response){
+        console.log(response.data)
+        ActivityRender(response.data)
+    });
+
+    function ActivityRender(aryData){ 
+        const List = document.querySelector(".ActivityTbl tbody")
+        aryData.forEach(o=>{
+
+             strHTML += `
+
+
+             <tr>
+                <th scope="row">1</th>
+                <td>${o.Title}</td>
+                <td></td>
+                <td>${o.SubTitle}</td>
+                <td>                       
+                    <button class="btn btn-info">編輯</button> | 
+                    <button class="btn btn-danger">編輯</button></td>
+            </tr>
+
+      
+             `
+
+        });
+      
+
+        List.innerHTML = strHTML
+    }
+
+}
