@@ -16,12 +16,13 @@ current: index
        </button>
         </div>
         <div class="col">
-            <button type="button" 
-            class="btn btn-primary" 
-            data-bs-toggle="modal" 
-            data-bs-target="#exampleModal" 
-            data-bs-whatever="@getbootstrap">
-            新增活動
+
+          
+
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">新增活動</button> -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddActivity">
+              新增活動
+            </button>
         </div>
     </div>
     <div class="row">
@@ -55,39 +56,72 @@ current: index
 
 
 
+ <!-- Modal -->
+<div class="modal fade" id="AddActivity" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">新增活動</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">活動名稱:</label>
+            <input type="text" class="form-control" id="activity-name">
+          </div>
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="recipient-name" class="col-form-label">Recipient:</label>
-              <input type="text" class="form-control" id="recipient-name">
-            </div>
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Message:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
-        </div>
+          <div class="mb-3">
+            <select class="form-select form-select-lg mb-3" id="activity-type" aria-label=".form-select-lg example">
+              <option selected>==請選擇類型==</option>
+              <option value="1">教會活動</option>
+              <option value="2">講者資訊</option>
+              <option value="3">最新資訊</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">活動內容:</label>
+            <textarea class="form-control" id="activity-context"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">活動日期:</label>
+            <input type="text" id="datepicker">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">備註:</label>
+            <input type="text" class="form-control" id="activity-note">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">其他事項:</label>
+            <textarea class="form-control" id="activity-other"></textarea>
+          </div>
+        </form>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">儲存</button>
+        <button type="button" class="btn btn-primary postArticle">發布</button>
       </div>
     </div>
   </div>
+</div>
 
-
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 <script src="./assets/js/login.js"></script>
+<!-- <script src="./assets/js/article.js"></script> -->
 <script src="./assets/js/ChurchActivity-list.js"></script>
+
 <script>
-renderActivityList();
+// renderActivityList();
+ 
 </script>

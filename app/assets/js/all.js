@@ -1,4 +1,5 @@
-const BaseURl = `https://json-server-vercel-seven.vercel.app/`
+// const BaseURl = `https://json-server-vercel-seven.vercel.app/`
+const BaseURl = `http://127.0.0.1:3000/`
 //https://json-server-vercel-a.vercel.app
 
 // const BaseURl = `http://localhost:3000/`
@@ -9,8 +10,15 @@ let IsLogin = false
 
 function ShowLoginMessage(user){
 
+ 
 
-  swal(`Hello ${user} Success`);
+      Swal.fire({
+        title: ` 登入成功!`,
+        text: '',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      })
+
 }
 
 function CheckLogin(){
@@ -23,12 +31,12 @@ function CheckLogin(){
       // )
 
 
-      Swal.fire({
-        title: '新增成功!',
-        text: '',
-        icon: 'success',
-        confirmButtonText: 'OK'
-      })
+      // Swal.fire({
+      //   title: '新增成功!',
+      //   text: '',
+      //   icon: 'success',
+      //   confirmButtonText: 'OK'
+      // })
       $("ul.nav").show()
     }else{
 

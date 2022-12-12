@@ -21,8 +21,7 @@ $(".login").on("click",function(){
 
             $(".login").val("登出")
 
-            
-            alert("登入成功")
+            ShowLoginMessage(response.data.user)
             // Swal.fire({
             //     title: '新增成功!',
             //     text: '',
@@ -112,11 +111,11 @@ $(".userDemo").on('click',function(){
 
 
 function topMenuInit(){
-    if(IsLogin){
-        $("ul.nav").show()
-    }else{
-        $("ul.nav").hide()
-    }
+    // if(IsLogin){
+    //     $("ul.nav").show()
+    // }else{
+    //     $("ul.nav").hide()
+    // }
 }
 
 

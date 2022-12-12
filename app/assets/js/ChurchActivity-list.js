@@ -1,7 +1,6 @@
 let strHTML = '';//迴圈暫存字串變數
 function ActivityListInit(){
     axios.get(`${BaseURl}Abouts`).then(function(response){
-        console.log(response.data)
         ActivityRender(response.data)
     });
     function ActivityRender(aryData){ 
@@ -43,8 +42,6 @@ function renderActivityList(){
         aryData.forEach(o=>{
 
              strHTML += `
-
-
              <tr>
                 <th scope="row">1</th>
                 <td>${o.Title}</td>
@@ -55,7 +52,6 @@ function renderActivityList(){
                     <button class="btn btn-danger">編輯</button></td>
             </tr>
 
-      
              `
 
         });
