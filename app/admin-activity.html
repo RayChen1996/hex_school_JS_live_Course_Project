@@ -19,24 +19,34 @@ current: index
 
           
 
-            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">新增活動</button> -->
+            <!-- <button type="button"  id="AddActivity" class="btn btn-primary">新增活動</button> -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddActivity">
               新增活動
             </button>
         </div>
     </div>
     <div class="row">
-        <div class="col">
-
+        <div class="col-4">
+          <div class="m-4">
+            <ul class="list-group w-50">
+                <!-- <li class="list-group-item disabled"> <a href="admin-article.html">文章管理</a> </li> -->
+                <li class="list-group-item active"> <a class="text-white " href="admin-activity.html">活動管理</a></li>
+                <!-- <li class="list-group-item disabled"><a href="admin-meeting.html">會議管理</a> </li> -->
+                <li class="list-group-item"><a href="admin-Accounting.html">奉獻管理</a> </li>
+                <li class="list-group-item"><a href="admin-schedule.html">行事曆管理</a> </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-10">
+        <div class="col-8">
             <table class="table ActivityTbl">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">活動名稱</th>
-                    <th scope="col">日期</th>
+                    
                     <th scope="col">內容</th>
+                    <th scope="col">建立日期</th>
+                    <th scope="col">修改日期</th>
                     <th scope="col">編輯</th>
                   </tr>
                 </thead>
@@ -52,7 +62,7 @@ current: index
 </div>
 
 
-
+ 
 
 
 
@@ -75,6 +85,7 @@ current: index
 
 
           <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">活動類型:</label>
             <select class="form-select form-select-lg mb-3" id="activity-type" aria-label=".form-select-lg example">
               <option selected>==請選擇類型==</option>
               <option value="1">教會活動</option>
@@ -86,10 +97,10 @@ current: index
             <label for="message-text" class="col-form-label">活動內容:</label>
             <textarea class="form-control" id="activity-context"></textarea>
           </div>
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <label for="recipient-name" class="col-form-label">活動日期:</label>
             <input type="text" id="datepicker">
-          </div>
+          </div> -->
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">備註:</label>
             <input type="text" class="form-control" id="activity-note">
@@ -105,12 +116,16 @@ current: index
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">儲存</button>
+        <button type="button" class="btn btn-outline-secondary sample-activity" >套用範本</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
         <button type="button" class="btn btn-primary postArticle">發布</button>
       </div>
     </div>
   </div>
 </div>
+
+
+
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   
@@ -122,6 +137,18 @@ current: index
 <script src="./assets/js/ChurchActivity-list.js"></script>
 
 <script>
-// renderActivityList();
+
+  $(function(){
+    renderActivityList();
+    $(".sample-activity").on('click',function(){
+      $("#activity-name").val("測試活動");
+      $("#activity-type").val("1");
+      $("#activity-context").val("測試內容")
+      $("#activity-note").val("測試備註")
+
+    })
+ 
+  })
+
  
 </script>

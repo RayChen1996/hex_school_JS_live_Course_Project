@@ -17,6 +17,18 @@
       "password": "$2a$10$Kghriraepdq5hRFOXIfXBe9enA.CwlmdEmvF495bCiRB6.FWXJ7bm",
       "role": "",
       "id": 3
+    },
+    {
+      "email": "zzz@gmail.com",
+      "password": "$2a$10$bTMp9iO00nl0Bp8RjKWbnOad9e92zMUfu1juNdfdAjGRBh2MLeNVa",
+      "role": "",
+      "id": 4
+    },
+    {
+      "email": "aaa@gmail.com",
+      "password": "$2a$10$.ZnKCj0V2gbKVuIOOsOFCeKkQNL./CJTZz01u.adYxSwf1VQKqqle",
+      "role": "",
+      "id": 5
     }
   ],
   "DailyBibles": [
@@ -41,84 +53,101 @@
   ],
   "Abouts": [
     {
-      "id": 1,
-      "tag": "最新資訊",
-      "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20201220_%E8%81%96%E8%AA%95%E7%AF%80%E6%85%B6%E7%A5%9D_221127.jpg?raw=true",
-      "Title": "即將到來 | 聖誕Party",
-      "SubTitle": "20201220 聖誕節慶祝"
-    },
-    {
       "tag": "講者資訊",
       "id": 2,
       "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_%E6%9E%97%E5%8D%9A%E5%A0%82%E7%89%A7%E5%B8%AB%E7%89%B9%E6%9C%8320170430_221127.jpg?raw=true",
-      "Title": "十一月講座 <林博堂牧師特會>",
-      "SubTitle": "2017-04-30"
+      "Title": "十一月講座 <林博堂牧師特會>  ",
+      "SubTitle": "2017-04-30",
+      "CreateDateTime": "2019-04-27",
+      "EditDateTime": "",
+      "Description": "十一月講座 <林博堂牧師特會> ，每一位慕道友聽聞林牧師講道，遠從北中南部聚集而來...."
     },
     {
       "id": 3,
       "tag": "教會活動",
-      "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20161224%E7%A8%AE%E5%AD%90%E6%95%99%E6%9C%83%E8%81%96%E8%AA%95%E5%A4%9C%E7%9B%B8%E7%89%87_221127.jpg?raw=true",
+      "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20201220_%E8%81%96%E8%AA%95%E7%AF%80%E6%85%B6%E7%A5%9D_221127.jpg?raw=true",
       "Title": "種子教會聖誕夜",
-      "SubTitle": "2016-12-24種子教會聖誕夜"
+      "SubTitle": "種子教會聖誕夜",
+      "CreateDateTime": "2016-12-24",
+      "EditDateTime": "",
+      "Description": "這一年特別不一樣的是，採用一家攜帶一到菜，每位弟兄姊妹家庭皆帶領親朋好友來聚集，一同慶祝一年一度耶誕節。"
     },
     {
       "id": 4,
       "tag": "講者資訊",
       "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_%E9%A6%AC%E6%96%87%E7%89%A7%E5%B8%AB20170820%E4%B8%BB%E6%97%A5_221127.jpg?raw=true",
       "Title": "馬文牧師來台",
-      "SubTitle": "2017-08-20 主日"
+      "SubTitle": "主日",
+      "CreateDateTime": "2017-08-20",
+      "EditDateTime": "",
+      "Description": "路易斯夫婦回美國之前，與董信明牧師一起攜帶物資到西螺探訪會友。"
     },
     {
       "id": 5,
       "tag": "教會活動",
       "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20190427%E5%8F%B0%E6%9D%B1%E7%AC%AC%E4%BA%8C%E5%A4%A9_221127.jpg?raw=true",
       "Title": "台東靈修會",
-      "SubTitle": "2019-04-27 台東第二天"
+      "SubTitle": "台東第二天",
+      "CreateDateTime": "2021-04-27",
+      "EditDateTime": "",
+      "Description": "20210427_教會一日遊活動！"
     },
     {
       "id": 6,
       "tag": "教會活動",
       "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20210808_%E6%85%B6%E7%A5%9D%E7%88%B6%E8%A6%AA%E7%AF%80_221127.jpg?raw=true",
       "Title": "慶祝父親節",
-      "SubTitle": "2021-08-08"
+      "SubTitle": "2021-08-08",
+      "CreateDateTime": "2019-04-27",
+      "EditDateTime": "",
+      "Description": "2021年台灣受covid-19病毒影響，在全國防疫三級警戒前、後，教會仍然能慶祝母親節與父親節，感謝神的恩典讓我相聚一起！"
     },
     {
       "id": 8,
       "tag": "教會活動",
       "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20201220_%E8%81%96%E8%AA%95%E7%AF%80%E6%85%B6%E7%A5%9D_221127.jpg?raw=true",
       "Title": "聖誕節慶祝",
-      "SubTitle": "2020-12-20"
+      "SubTitle": "2020-12-20",
+      "CreateDateTime": "2019-04-27",
+      "EditDateTime": "",
+      "Description": "2019年初，高武和弟兄因為無法自主呼吸而住院，歷經插管治療甚至將要氣切，期間教會弟兄姐妹不住的禱告、探望，遠道從美國回台的路易斯夫婦也常到醫院禱告，因機票時間在離台前仍然前往醫院，回美國後一直紀念高弟兄的身體狀況。      此次路易斯夫婦回台再見到高弟兄，看見他身體健康、精神爽朗，大家一同在主裡喜樂，也將榮耀歸給神，雖然不能常在一起，但在主裡仍然彼此紀念、代禱，神的美善在祂兒女身上彰顯。"
     },
     {
       "id": 9,
       "tag": "教會活動",
       "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/20170318%E6%96%B0%E9%81%A0%E8%AA%9E%E6%A2%85%E5%AE%B6%E5%BA%AD%E7%A6%AE%E6%8B%9C_221127.jpg?raw=true",
       "Title": "會友家庭禮拜",
-      "SubTitle": "2017-03-18"
+      "SubTitle": "2017-03-18",
+      "CreateDateTime": "2019-04-27",
+      "EditDateTime": "",
+      "Description": "2020.7.8教會禱告會全體至西螺探訪，探訪程媽媽、許素娥姐妹及唐國女姐妹三個家庭，求主施恩憐憫祂的兒女們。"
     },
     {
       "id": 10,
       "tag": "教會活動",
       "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_%E6%9E%97%E4%BD%A9%E5%90%9B%E5%A7%90%E5%A6%B9%E5%8F%97%E6%B4%971061231_221127.jpg?raw=true",
       "Title": "姐妹受洗",
-      "SubTitle": "2017-12-31"
+      "SubTitle": "2017-12-31",
+      "CreateDateTime": "2019-04-27",
+      "EditDateTime": "",
+      "Description": "教會姊妹：林佩君已在教會兩年多時間，願意接受牧師受洗祝福。"
     },
     {
-      "tag": "javascriptBasics@gmail.com",
+      "id": 12,
+      "tag": "最新活動",
+      "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20201220_%E8%81%96%E8%AA%95%E7%AF%80%E6%85%B6%E7%A5%9D_221127.jpg?raw=true",
+      "Title": "聖誕慶祝",
+      "SubTitle": "",
+      "CreateDateTime": "2022-12-25",
+      "EditDateTime": "",
+      "Description": "2020.12.20_聖誕節慶祝 今年受肺炎疫情影響，許多家人不能一起慶祝聖誕節，持續在代禱中守望，求主保守、賜福！"
+    },
+    {
+      "tag": "1",
       "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20161224%E7%A8%AE%E5%AD%90%E6%95%99%E6%9C%83%E8%81%96%E8%AA%95%E5%A4%9C%E7%9B%B8%E7%89%87_221127.jpg?raw=true",
-      "Title": "十一月講座 <林博堂牧師特會>",
-      "SubTitle": "2017-04-30",
-      "id": 11
-    },
-    {
-      "date": "2022-12-01",
-      "title": "dsf",
-      "id": 12
-    },
-    {
-      "SCH_DATE": "2022-12-03",
-      "title": "dddd",
-      "note": "",
+      "Title": "sdadsa",
+      "SubTitle": "",
+      "DateTime": "",
       "id": 13
     }
   ],
@@ -177,27 +206,170 @@
     },
     {
       "SCH_DATE": "2022-11-28",
-      "title": "AAA",
+      "title": "測試活動",
       "note": "",
       "id": 6
     },
     {
       "SCH_DATE": "2022-12-02",
-      "title": "BBB",
+      "title": "測試活動",
       "note": "",
       "id": 7
     },
     {
       "SCH_DATE": "2022-12-02",
-      "title": "TTTT",
+      "title": "測試活動",
       "note": "",
       "id": 8
     },
     {
       "SCH_DATE": "2022-12-09",
-      "title": "fff",
+      "title": "測試活動",
       "note": "",
       "id": 9
+    },
+    {
+      "SCH_DATE": "2022-12-03",
+      "title": "馬文牧師來台",
+      "note": "",
+      "id": 10
+    },
+    {
+      "SCH_DATE": "2022-12-10",
+      "title": "姐妹受洗",
+      "note": "",
+      "id": 11
+    },
+    {
+      "SCH_DATE": "2022-12-10",
+      "title": "測試活動",
+      "note": "",
+      "id": 12
+    },
+    {
+      "SCH_DATE": "2022-12-02",
+      "title": "台東靈修會",
+      "note": "",
+      "id": 13
+    },
+    {
+      "SCH_DATE": "2022-12-09",
+      "title": "姐妹受洗",
+      "note": "",
+      "id": 14
+    },
+    {
+      "SCH_DATE": "2022-12-10",
+      "title": "台東靈修會",
+      "note": "",
+      "id": 15
+    },
+    {
+      "SCH_DATE": "2022-12-10",
+      "title": "姐妹受洗",
+      "note": "",
+      "id": 16
+    },
+    {
+      "SCH_DATE": "2022-12-10",
+      "title": "聖誕節慶祝",
+      "note": "",
+      "id": 17
+    },
+    {
+      "SCH_DATE": "2022-12-17",
+      "title": "馬文牧師來台",
+      "note": "",
+      "id": 18
+    },
+    {
+      "SCH_DATE": "2022-11-30",
+      "title": "馬文牧師來台",
+      "note": "",
+      "id": 19
+    },
+    {
+      "SCH_DATE": "2022-12-08",
+      "title": "台東靈修會",
+      "note": "",
+      "id": 20
+    },
+    {
+      "SCH_DATE": "2022-12-10",
+      "title": "姐妹受洗",
+      "note": "",
+      "id": 21
+    },
+    {
+      "SCH_DATE": "2022-12-13",
+      "title": "馬文牧師來台",
+      "note": "",
+      "id": 22
+    }
+  ],
+  "Dedication": [
+    {
+      "id": 1,
+      "SCH_DATE": "05.01.2022",
+      "title": "主日奉獻",
+      "note": "",
+      "Name": "柳 O O"
+    },
+    {
+      "id": 2,
+      "SCH_DATE": "12.01.2022",
+      "title": "主日奉獻",
+      "note": "",
+      "Name": "陳 O O"
+    },
+    {
+      "id": 3,
+      "SCH_DATE": "26.12.2022",
+      "title": "主日奉獻",
+      "note": "",
+      "Name": "陳 O O"
+    },
+    {
+      "id": 4,
+      "SCH_DATE": "26.12.2022",
+      "title": "主日奉獻",
+      "note": "",
+      "Name": "陳 O O"
+    },
+    {
+      "id": 1,
+      "SCH_DATE": "26.12.2022",
+      "title": "主日奉獻",
+      "note": "",
+      "Name": "陳 O O"
+    },
+    {
+      "id": 1,
+      "SCH_DATE": "26.12.2022",
+      "title": "主日奉獻",
+      "note": "",
+      "Name": "陳 O O"
+    },
+    {
+      "id": 1,
+      "SCH_DATE": "26.12.2022",
+      "title": "主日奉獻",
+      "note": "",
+      "Name": "陳 O O"
+    },
+    {
+      "id": 1,
+      "SCH_DATE": "26.12.2022",
+      "title": "主日奉獻",
+      "note": "",
+      "Name": "陳 O O"
+    },
+    {
+      "id": 1,
+      "SCH_DATE": "26.12.2022",
+      "title": "主日奉獻",
+      "note": "",
+      "Name": "陳 O O"
     }
   ]
 }

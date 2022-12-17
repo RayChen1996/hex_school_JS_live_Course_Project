@@ -25,46 +25,106 @@ current: index
           <img src="./assets/images/BN 375.png" alt="LOGO">
         </div>
         <div class="col">
-          <form>
-            <div class="form-outline mb-4">
-              <label class="form-label" for="form2Example1">帳號</label>
-              <input type="email" id="useracc" class="form-control" />
-            </div>
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-              <label class="form-label" for="form2Example2">密碼</label>
-              <input type="password" id="userpwd" class="form-control" />
-            </div>
+      
 
-
-
-            <div class="container">
-              <div class="row">
-                <div class="col">
-
-                </div>
-                <div class="col">
-                  <button type="button" class="btn btn-primary btn-block mb-4 login" onclick="Login()">
-                    登入
-                  </button>
-                  <button  type="button" class="btn btn-outline-primary btn-block mb-4 signup" onclick="RegisterUser()">
-                    註冊
-                  </button>
-
-                 
-                 
-          
-                </div>
-                <div class="col">
-                  <a class='mangerDemo' onclick="chgMgrAccText()">管理者</a>
-                  <a class='userDemo' onclick="chgUserAccText()">會友</a>
-                </div>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">登入</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">註冊</button>
+            </li>
+             
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div id="login">
+                <form>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">帳號</label>
+                    <input type="email" id="useracc" class="form-control" />
+                  </div>
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example2">密碼</label>
+                    <input type="password" id="userpwd" class="form-control" />
+                  </div>
+    
+    
+    
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+    
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-primary btn-block mb-4 login" onclick="Login()">
+                          登入
+                        </button>
+                        <!-- <button  type="button" class="btn btn-outline-primary btn-block mb-4 signup" onclick="RegisterUser()">
+                          註冊
+                        </button> -->
+    
+                      
+                      
+                
+                      </div>
+                      <div class="col">
+                        <a class='mangerDemo' onclick="chgMgrAccText()">管理者</a>
+                        <a class='userDemo' onclick="chgUserAccText()">會友</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Submit button -->
+                </form>           
               </div>
             </div>
-            <!-- Submit button -->
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div id="register">
+                <form>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">姓名</label>
+                    <input type="email" id="regusername" class="form-control" />
+                  </div> 
+                  <div class="form-outline mb-4 input-group w-75 p-2">
+                    <label class="form-label" for="form2Example1">E-mail： </label>
+                    <input type="email" id="reguseracc" class="form-control" placeholder="請輸入您的 E-mail" aria-label="Email" aria-describedby="basic-addon1"  />@gmail.com
+                  </div>
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example2">密碼</label>
+                    <input type="password" id="reguserpwd" class="form-control" />
+                  </div>
+    
+    
+    
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+    
+                      </div>
+                      <div class="col">
+                        <button  type="button" class="btn btn-outline-primary btn-block mb-4 signup" onclick="RegisterUser()">
+                          註冊
+                        </button>     
+                      </div>
+                      <div class="col">
+                        <!-- <a class='mangerDemo' onclick="chgMgrAccText()">管理者</a>
+                        <a class='userDemo' onclick="chgUserAccText()">會友</a> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Submit button -->
+                </form>           
+              </div>
+            </div>
+            
+          </div>
 
 
-          </form>           
+
+
+
         </div>
         <div class="col-1"></div>
 
@@ -72,4 +132,4 @@ current: index
 </div>
 
 
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>

@@ -426,25 +426,26 @@ body{
           color: #18A7A9;
         }
         .story{
-          
           .img{ 
-   
             position: relative;
             height: 250px;
-            
-           
             line-height: 30px; 
             color: #DFEBE0;
+            border: 2px solid #fff;
+            width: 100%;
+            overflow: hidden;
             img{
               position: absolute;
               top: 0;
-              border-radius: 10px;
-   
+              border-radius: 10px;   
               background-size: contain;
               background-size: cover;
               height: 250px;
               object-fit: cover;
               object-position: center top;
+              width: 100%;
+              height: 300px;
+              transition: all 2s ease-in-out;
             }
             .text{
               position: absolute;
@@ -456,7 +457,10 @@ body{
               bottom: 0;
             }
           }
-
+          .img:hover img {
+            transform: scale(1.5, 1.4);
+            cursor: pointer;
+          }
 
         }
 

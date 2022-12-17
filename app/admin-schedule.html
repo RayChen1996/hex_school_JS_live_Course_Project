@@ -5,15 +5,38 @@ engine: ejs
 current: index
 ---
 
+
+<div class="container">
+    <div class="row">
+        
+
+      <div class="col-4">
+
+          <div class="m-4">
+              <ul class="list-group w-50">
+                  <!-- <li class="list-group-item disabled"> <a href="admin-article.html">文章管理</a> </li> -->
+                  <li class="list-group-item"> <a href="admin-activity.html">活動管理</a></li>
+                  <!-- <li class="list-group-item disabled"><a href="admin-meeting.html">會議管理</a> </li> -->
+                  <li class="list-group-item"><a href="admin-Accounting.html">奉獻管理</a> </li>
+                  <li class="list-group-item active"><a class="text-white " href="admin-schedule.html">行事曆管理</a> </li>
+              </ul>
+          </div>
+      </div>
+      <div class="col-8">
+          <div class="form-outline">
+              <div id="calendar"></div>       
+          </div>
+      </div>
+    </div>
+</div>
+
+<br>
 <div class="contaner">
   <div class="row">
-    <div class="col">
+    <div class="col-10">
 
     </div>
-    <div class="col">
-
-    </div>
-    <div class="col">
+    <div class="col-2">
       <Button class="btn btn-primary">
         發佈
        </Button>
@@ -23,38 +46,14 @@ current: index
     </div>
   </div>
 </div>
-
-<div class="container">
-    <div class="row">
-        
-
-        <div class="col">
-
-            <div class="form-outline">
-                <div id="calendar"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-                 
-           
-            
-        
-
-            </div>
-
-     
-        </div>
-
- 
-
-
-    </div>
-</div>
-
-
+<script src="./assets/js/all.js"></script>
 <script src="./assets/js/ProcessSchedule.js"></script>
-
 <script>
-
+let Activity = []
+let selectedDate = ""
 var eventsArray = [
     {
       title  : '主日聚會',
@@ -106,108 +105,49 @@ var calendarEl = document.getElementById('calendar');
 var calendar = new FullCalendar.Calendar(calendarEl, {
     height: 1000,
     plugins: [ 'dayGrid', 'interaction' ],
-    
     dateClick: function(info) { 
       
-      // Swal.fire({
-      //   title: '新增節日',
-      //   input: 'text',
-      //   inputAttributes: {
-      //       autocapitalize: 'off'
-      //   },
-      //   showCancelButton: false,
-      //   confirmButtonText: '確定',
-      //   showLoaderOnConfirm: true,
-      //   preConfirm: (login) => {
-           
-      //       return fetch(`${BaseURl}Schedules`)
-      //       .then(response => {
-      //           if (!response.ok) {
-      //           throw new Error(response.statusText)
-      //           }
-      //           return response.json()
-      //       })
-      //       .catch(error => {
-      //           Swal.showValidationMessage(
-      //           `Request failed: ${error}`
-      //           )
-      //       })
-      //   },
-      //   allowOutsideClick: () => !Swal.isLoading()
-      //   }).then((result) => {
-      //       console.log(result)
-      //       if (result.isConfirmed) {
-      //           Swal.fire({
-      //           title: `${result.value.login}'s avatar`,
-      //           imageUrl: result.value.avatar_url
-      //           })
-      //       }
-      //   })
-      Swal.fire({
-        title: '新增節日',
-        input: 'text',
-        // html:
-        // '<input id="swal-input1" class="swal2-input">' +
-        // '<input id="swal-input2" class="swal2-input">',
-        
-        inputPlaceholder: '請輸入節日或行程規劃', // placeholder，若「input: 'select'」則為空選項顯示文字
-        inputValidator: function(value){
-          return new Promise(function(resolve){
-            if (value !== ''){
-              resolve();
-            }else{
-              resolve('必填');
-            }
-          });
-        }
-      }).then(function(result){
-        console.log(result.value);
-        if(result.value!==undefined){
-          eventsArray.push({
-            date: info.dateStr,
-            title: ""+result.value
-          });
-          
-          calendar.refetchEvents();
-          axios.post(`${BaseURl}Schedules`,{
-            SCH_DATE: info.dateStr,
-            title: ""+result.value,
-            note:""
-          })
-              .then( (response) => {
-                  console.log(response.data)
-
-                  Swal.fire({
-                      title: ` 新增成功!`,
-                      text: '',
-                      icon: 'success',
-                      confirmButtonText: 'OK'
-                    })
-              })
-              .catch( (error) => {
-                  console.log(error)
-              })
-
-
-        }
-
-        // result.value 為 '美女'
-      });
-
-
-
-
-
-
-
-
-
-
+      selectedDate = info.dateStr
+      ShowAskModal(info)
 
     },
   
-    eventClick: function(info) {
-      alert(info.event.title)
+    eventClick: function(calEvent, jsEvent, view) {
+      // alert(info.event)
+      // console.log(info)
+      Swal.fire({
+        title: '',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: '修改',
+        denyButtonText: `刪除`,
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          //update func 
+          
+          refreshCalendar()
+        } else if (result.isDenied) {
+          //delete func
+
+
+          refreshCalendar()
+          // Swal.fire('Changes are not saved', '', 'info')
+        }
+      })
+
+
+    //   console.log(moment().format("MMM-DD-YY"));
+    //   var dt = calEvent.event.start; 
+    // var r = confirm("Delete " + calEvent.event.title + "\n" + dt);
+    // if (r === true) {
+    //    $('#calendar').fullCalendar('removeEvents', calEvent._id);
+    // }
+      // alert('Clicked on: ' + calEvent.start.format());
+
+
+
+
     },
   
     events: function(info, successCallback, failureCallback) {
@@ -217,4 +157,97 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 
 calendar.render();
+ 
+
+ 
+  
+
+
+
+function LoadActivitySource(info){
+  axios.get(`${BaseURl}Abouts`)
+  .then(function(response){
+      let Activity = response.data
+      let tmpActivity = {}
+      Activity.forEach((item,idx)=>{
+        console.log(item)
+        tmpActivity[`${item.Title}`] = `${item.Title}  ${item.SubTitle}`
+      })
+      GeneratorPopup(tmpActivity,info)
+      return response.data
+  })
+  .catch(function(err){
+    console.log(err)
+  });
+}
+function ShowAskModal(aryData,info){
+    LoadActivitySource(info) 
+}
+function GeneratorPopup(activityData,info){
+  const { value: fruit } = Swal.fire({
+    title: '選擇活動',
+    input: 'select',
+    inputOptions: activityData ,
+    inputPlaceholder: '選擇活動',
+    showCancelButton: true,
+    inputValidator: (value) => {
+      return new Promise((resolve) => {
+  
+          eventsArray.push({
+            date: selectedDate,
+            title: ""+value
+          });
+          calendar.refetchEvents();
+          axios.post(`${BaseURl}Schedules`,{
+            SCH_DATE: selectedDate,
+            title: value,
+            note:""
+          })
+              .then( (response) => {
+                  console.log(response.data)
+
+                  Swal.fire({
+                      title: ` 新增成功!`,
+                      text: '',
+                      icon: 'success',
+                      confirmButtonText: '確定'
+                    })
+              })
+              .catch( (error) => {
+                  console.log(error)
+              })
+        // if (value === 'oranges') { 
+        //   resolve()
+        // } else {
+        //   resolve('You need to select oranges :)')
+        // }
+        resolve()
+      })
+    }
+  })
+
+  if (fruit) {
+    Swal.fire('You selected: ' + fruit)
+  }
+}
+
+function refreshCalendar(){
+  console.log("重新獲得行事曆資料2")
+  axios.get(`${BaseURl}Schedules`)
+    .then(function(response){
+        Activity = response.data
+        Activity.forEach((item,idx)=>{
+          eventsArray.push({
+            title  : `${item.title}`,
+            start  : `${item.SCH_DATE}`,
+            color  : '#18A7A9'
+          })
+        })
+        calendar.refetchEvents();
+    })
+    .catch(function(err){
+      console.log(err)
+    });
+}
+refreshCalendar()
 </script>

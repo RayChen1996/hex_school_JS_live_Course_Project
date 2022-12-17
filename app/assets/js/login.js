@@ -66,11 +66,9 @@ $(".signup").on('click',function(){
 
 
 
-
-
     axios.post(`${BaseURl}signup`,{
-        "email":$("#useracc").val(),
-        "password":$("#userpwd").val(),
+        "email":$("#reguseracc").val(),
+        "password":$("#reguserpwd").val(),
         "role":""
     })
     .then( (response) => {
@@ -124,9 +122,32 @@ function chgUserAccText(){
 
 
 function RegisterUser(){
+    var constraints = {
+        username: {
+          presence: true,
+          exclusion: {
+            within: ["nicklas"],
+            message: "'%{value}' is not allowed"
+          }
+        },
+        password: {
+          presence: true,
+          length: {
+            minimum: 6,
+            message: "密碼字元必須大於4位數"
+          }
+        }
+      };
+
+    if(validate({username:$("#reguseracc").val(),password: $("#reguserpwd").val() }, constraints)){
+        console.log("註冊成功")
+    }else{
+        console.log("註冊失敗")
+    }
+ 
     axios.post(`${BaseURl}signup`,{
-        "email":$("#useracc").val(),
-        "password":$("#userpwd").val(),
+        "email":$("#reguseracc").val(),
+        "password":$("#reguserpwd").val(),
         "role":""
     })
     .then( (response) => {
@@ -140,6 +161,7 @@ function RegisterUser(){
                 // alert(response.status)
             }
         }
+        alert(response.data)
         console.log(response.data)
      
     })
@@ -164,18 +186,12 @@ function Login(){
         "password":$("#userpwd").val()
     })
     .then( (response) => {
-    
         if(response.status == 200){
-     
-            console.log(response.data)
             saveDataToLocalStorage('_token', response.data.accessToken);
             saveDataToLocalStorage('_user', response.data.user);
             saveDataToLocalStorage('_expire', { time: new Date().getTime(), expire: expireMins * 60 * 1000 });
 
-
-
             $(".login").val("登出")
-
             ShowLoginMessage(response.data.user)
             // Swal.fire({
             //     title: '新增成功!',
@@ -184,15 +200,12 @@ function Login(){
             //     confirmButtonText: 'OK'
             //   })
             IsLogin = true
-            // window.location.href = "admin-page.html"
+            window.location.href = "admin-Welcome.html"
             topMenuInit()
             
             // ShowLoginMessage(response.data.user)
 
         }else{
-
-
-
             if(response.data=="Email already exists"){
                 alert("帳號已存在")
             }else{

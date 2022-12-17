@@ -411,7 +411,6 @@ current: index
 
 
 <script>
-
   var eventsArray = [
       {
         title  : '主日聚會',
@@ -423,16 +422,15 @@ current: index
         start  : '2022-12-18',
         color  : '#18A7A9'
       },
-         {
-        title  : '主日聚會',
-        start  : '2022-12-25',
-        end: '2022-12-30',
-           color  : '#18A7A9',
-            
-                  overlap: false,
+      {
+          title  : '主日聚會',
+          start  : '2022-12-25',
+          end: '2022-12-30',
+          color  : '#18A7A9',
+          overlap: false,
                 
       },
-         {
+      {
         title  : '主日聚會',
         start  : '2022-12-04',
         color  : '#18A7A9'
@@ -467,7 +465,7 @@ current: index
       
       dateClick: function(info) { 
         
-        Swal.fire({
+        /*Swal.fire({
           title: '新增節日',
           input: 'text',
           inputAttributes: {
@@ -500,18 +498,23 @@ current: index
           //     imageUrl: result.value.avatar_url
           //     })
           // }
-          })
+          })*/
         
-        eventsArray.push({
-          date: info.dateStr,
-          title: ""+sign.toLowerCase()
-        });
+        // eventsArray.push({
+        //   date: info.dateStr,
+        //   title: ""+sign.toLowerCase()
+        // });
         
         calendar.refetchEvents();
       },
     
       eventClick: function(info) {
-        alert(info.event.title)
+        // alert(info.event.title)
+
+
+
+
+
       },
     
       events: function(info, successCallback, failureCallback) {
@@ -521,4 +524,33 @@ current: index
   });
   
   calendar.render();
+
+  $(function(){
+    refreshCalendar()
+  })
+  
+  function refreshCalendar(){
+    console.log("重新獲得行事曆資料")
+    axios.get(`${BaseURl}Schedules`)
+      .then(function(response){
+          console.log(response.data)
+          let Activity = response.data
+
+          Activity.forEach((item,idx)=>{
+            eventsArray.push({
+              title  : `${item.title}`,
+              start  : `${item.SCH_DATE}`,
+              color  : '#18A7A9'
+            })
+          })
+
+          calendar.refetchEvents();
+          // GeneratorPopup(tmpActivity,info)
+
+          // return response.data
+      })
+      .catch(function(err){
+        console.log(err)
+      });
+  }
   </script>

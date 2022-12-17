@@ -1,8 +1,15 @@
 # 六角學院JS直播班專題 | 教會介紹網站
 <img alt="Let-s-Entertaining" src="https://i.imgur.com/dTiWpCO.png">
 
+### 管理者登入
 <p>測試帳號: admin@gmail.com</p>
 <p>測試密碼: 12345678</p>
+
+### 會友登入
+<p>測試帳號: user@gmail.com</p>
+<p>測試密碼: 0000</p>
+
+
 
 ## 專題 練習(功能)---完成進度
 ### 已完成部分:

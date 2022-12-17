@@ -64,7 +64,14 @@ document.addEventListener('DOMContentLoaded', function() {
         },
       
         eventClick: function(info) {
-          alert(info.event.title)
+          //alert(info.event.title)
+
+          console.log(info)
+
+
+
+
+
         },
       
         events: function(info, successCallback, failureCallback) {
@@ -74,4 +81,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     calendar.render();
+
+
+
+ 
+      refreshCalendar()
+ 
+    
+    function refreshCalendar(){
+      console.log("重新獲得行事曆資料")
+      axios.get(`${BaseURl}Schedules`)
+        .then(function(response){
+            console.log(response.data)
+            let Activity = response.data
+  
+            Activity.forEach((item,idx)=>{
+              eventsArray.push({
+                title  : `${item.title}`,
+                start  : `${item.SCH_DATE}`,
+                color  : '#18A7A9'
+              })
+            })
+  
+            calendar.refetchEvents();
+            // GeneratorPopup(tmpActivity,info)
+  
+            // return response.data
+        })
+        .catch(function(err){
+          console.log(err)
+        });
+    }
+
+
+
   });
