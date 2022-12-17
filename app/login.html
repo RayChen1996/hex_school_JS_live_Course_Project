@@ -11,9 +11,7 @@ current: index
     <div class="col"></div>
     <div class="col d-flex justify-content-center">
 
-        <a class='mangerDemo'>管理者</a> |
-        <a class='userDemo'>會友</a>
-
+      
       
       
     </div>
@@ -23,7 +21,9 @@ current: index
 
 <div class="container h-100 mb-100 mt-5 ">
     <div class="row">
-        <div class="col-1"></div>
+        <div class="col">
+          <img src="./assets/images/BN 375.png" alt="LOGO">
+        </div>
         <div class="col">
           <form>
             <div class="form-outline mb-4">
@@ -44,15 +44,20 @@ current: index
 
                 </div>
                 <div class="col">
-                  <button type="button" class="btn btn-primary btn-block mb-4 login">
+                  <button type="button" class="btn btn-primary btn-block mb-4 login" onclick="Login()">
                     登入
                   </button>
-                  <button  type="button" class="btn btn-outline-primary btn-block mb-4 signup" >
+                  <button  type="button" class="btn btn-outline-primary btn-block mb-4 signup" onclick="RegisterUser()">
                     註冊
                   </button>
+
+                 
+                 
+          
                 </div>
                 <div class="col">
-
+                  <a class='mangerDemo' onclick="chgMgrAccText()">管理者</a>
+                  <a class='userDemo' onclick="chgUserAccText()">會友</a>
                 </div>
               </div>
             </div>
@@ -67,4 +72,4 @@ current: index
 </div>
 
 
-<script src="./assets/js/login.js"></script>
+
