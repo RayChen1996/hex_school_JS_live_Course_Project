@@ -18,6 +18,9 @@ $(".postArticle").on("click",function(){
                 icon: 'success',
                 confirmButtonText: 'OK'
               })
+
+
+              renderActivityList()
         })
         .catch( (error) => {
             console.log(error)
@@ -43,6 +46,9 @@ $(".postPayment").on("click",function(){
                 icon: 'success',
                 confirmButtonText: 'OK'
               })
+
+
+              renderPayList()
         })
         .catch( (error) => {
             console.log(error)

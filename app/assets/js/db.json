@@ -23,12 +23,6 @@
       "password": "$2a$10$bTMp9iO00nl0Bp8RjKWbnOad9e92zMUfu1juNdfdAjGRBh2MLeNVa",
       "role": "",
       "id": 4
-    },
-    {
-      "email": "aaa@gmail.com",
-      "password": "$2a$10$.ZnKCj0V2gbKVuIOOsOFCeKkQNL./CJTZz01u.adYxSwf1VQKqqle",
-      "role": "",
-      "id": 5
     }
   ],
   "DailyBibles": [
@@ -93,36 +87,6 @@
       "Description": "路易斯夫婦回美國之前，與董信明牧師一起攜帶物資到西螺探訪會友。"
     },
     {
-      "id": 5,
-      "tag": "教會活動",
-      "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20190427%E5%8F%B0%E6%9D%B1%E7%AC%AC%E4%BA%8C%E5%A4%A9_221127.jpg?raw=true",
-      "Title": "台東靈修會",
-      "SubTitle": "台東第二天",
-      "CreateDateTime": "2021-04-27",
-      "EditDateTime": "",
-      "Description": "20210427_教會一日遊活動！"
-    },
-    {
-      "id": 6,
-      "tag": "教會活動",
-      "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20210808_%E6%85%B6%E7%A5%9D%E7%88%B6%E8%A6%AA%E7%AF%80_221127.jpg?raw=true",
-      "Title": "慶祝父親節",
-      "SubTitle": "2021-08-08",
-      "CreateDateTime": "2019-04-27",
-      "EditDateTime": "",
-      "Description": "2021年台灣受covid-19病毒影響，在全國防疫三級警戒前、後，教會仍然能慶祝母親節與父親節，感謝神的恩典讓我相聚一起！"
-    },
-    {
-      "id": 7,
-      "tag": "教會活動",
-      "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20201220_%E8%81%96%E8%AA%95%E7%AF%80%E6%85%B6%E7%A5%9D_221127.jpg?raw=true",
-      "Title": "聖誕節慶祝",
-      "SubTitle": "2020-12-20",
-      "CreateDateTime": "2019-04-27",
-      "EditDateTime": "",
-      "Description": "2019年初，高武和弟兄因為無法自主呼吸而住院，歷經插管治療甚至將要氣切，期間教會弟兄姐妹不住的禱告、探望，遠道從美國回台的路易斯夫婦也常到醫院禱告，因機票時間在離台前仍然前往醫院，回美國後一直紀念高弟兄的身體狀況。      此次路易斯夫婦回台再見到高弟兄，看見他身體健康、精神爽朗，大家一同在主裡喜樂，也將榮耀歸給神，雖然不能常在一起，但在主裡仍然彼此紀念、代禱，神的美善在祂兒女身上彰顯。"
-    },
-    {
       "id": 8,
       "tag": "教會活動",
       "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20201220_%E8%81%96%E8%AA%95%E7%AF%80%E6%85%B6%E7%A5%9D_221127.jpg?raw=true",
@@ -161,14 +125,6 @@
       "CreateDateTime": "2022-12-25",
       "EditDateTime": "",
       "Description": "這一年，因應防疫，採簡單形式舉行，請每位弟兄姊妹家庭皆帶領親朋好友來聚集，一同慶祝一年一度耶誕節。"
-    },
-    {
-      "tag": "1",
-      "Photo": "https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_20161224%E7%A8%AE%E5%AD%90%E6%95%99%E6%9C%83%E8%81%96%E8%AA%95%E5%A4%9C%E7%9B%B8%E7%89%87_221127.jpg?raw=true",
-      "Title": "主日聚會",
-      "SubTitle": "",
-      "DateTime": "",
-      "id": 12
     }
   ],
   "Historys": [
@@ -209,6 +165,24 @@
       "title": "主日聚會",
       "note": "",
       "id": 3
+    },
+    {
+      "SCH_DATE": "2022-12-03",
+      "title": "會友家庭禮拜",
+      "note": "",
+      "id": 4
+    },
+    {
+      "SCH_DATE": "2022-12-06",
+      "title": "十一月講座 <林博堂牧師特會>",
+      "note": "",
+      "id": 5
+    },
+    {
+      "SCH_DATE": "2022-12-16",
+      "title": "聖誕節慶祝",
+      "note": "",
+      "id": 6
     }
   ],
   "Dedication": [
@@ -290,6 +264,41 @@
       "title": "aaa",
       "Money": "1000",
       "id": 5
+    },
+    {
+      "Name": "陳先生",
+      "SCH_DATE": "2000",
+      "title": "陳先生",
+      "Money": "2000",
+      "id": 6
+    },
+    {
+      "Name": "陳先生",
+      "SCH_DATE": "2000",
+      "title": "陳先生",
+      "Money": "2000",
+      "id": 7
+    },
+    {
+      "Name": "陳先生",
+      "SCH_DATE": "2000",
+      "title": "陳先生",
+      "Money": "2000",
+      "id": 8
+    },
+    {
+      "Name": "陳先生",
+      "SCH_DATE": "2000",
+      "title": "陳先生",
+      "Money": "2000",
+      "id": 9
+    },
+    {
+      "Name": "陳 先生",
+      "SCH_DATE": "5000",
+      "title": "陳 先生",
+      "Money": "5000",
+      "id": 10
     }
   ],
   "Member": [

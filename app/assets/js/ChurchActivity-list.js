@@ -128,8 +128,9 @@ function renderActivityList(){
                 
 
                 <td>${o.SubTitle}</td>
-                <td>${o.CreateDateTime}</td>
-                <td>${o.EditDateTime}</td>
+                
+                <td>2022-12-18</td>
+                <td> </td>
                 <td>                       
                     <button class="btn btn-info" onclick='EditActivity(${o.id})'  >編輯</button> | 
                     <button class="btn btn-danger" onclick='DelActivity(${o.id})' >刪除</button></td>

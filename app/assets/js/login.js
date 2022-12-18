@@ -146,7 +146,7 @@ function RegisterUser(){
     }
  
     axios.post(`${BaseURl}signup`,{
-        "email":$("#reguseracc").val(),
+        "email":$("#reguseracc").val()+"@gmail.com",
         "password":$("#reguserpwd").val(),
         "role":""
     })
@@ -159,9 +159,12 @@ function RegisterUser(){
                 alert("帳號已存在")
             }else{
                 // alert(response.status)
+
+                alert("帳號註冊成功")
+
             }
         }
-        alert(response.data)
+      
         console.log(response.data)
      
     })
