@@ -1,69 +1,155 @@
 ---
-title: Seed Of Church | 後台管理 | 會計管理
+title: Seed Of Church | 後台管理 | 奉獻管理
 layout: ./app/admin-index.ejs
 engine: ejs
 current: index
 ---
 
-
-
-
-
-<div class="container">
+<div class="container w-100">
     <div class="row">
         <div class="col">
-            <div class="m-4">
-                <ul class="list-group w-50">
-                    <!-- <li class="list-group-item disabled"> <a href="admin-article.html">文章管理</a> </li> -->
-                    <li class="list-group-item "> <a href="admin-activity.html">活動管理</a></li>
-                    <!-- <li class="list-group-item disabled"><a href="admin-meeting.html">會議管理</a> </li> -->
-                    <li class="list-group-item active"><a class="text-white " href="admin-Accounting.html">奉獻管理</a> </li>
-                    <li class="list-group-item"><a href="admin-schedule.html">行事曆管理</a> </li>
-                </ul>
-            </div>
+            <!-- <div class="btn btn-outline-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"></div>>新增活動</div> -->
+
         </div>
-
         <div class="col">
-         
-            <div class="form-outline">
-                <label class="form-label" for="typeText">奉獻金額</label>
-                <input type="text" id="typeText" class="form-control" />
-                
-                <div class="mb-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                        匿名奉獻
-                        </label>
-                      </div>
-                </div>
+ 
+       </button>
+        </div>
+        <div class="col">
 
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">代禱事項&其他</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
+          
 
+            <!-- <button type="button"  id="AddActivity" class="btn btn-primary">新增活動</button> -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddActivity">
+              新增奉獻
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+          <div class="m-4">
+            <ul class="list-group w-50">
+                <!-- <li class="list-group-item disabled"> <a href="admin-article.html">文章管理</a> </li> -->
+                <li class="list-group-item active"> <a class="text-white " href="admin-activity.html">活動管理</a></li>
+                <!-- <li class="list-group-item disabled"><a href="admin-meeting.html">會議管理</a> </li> -->
+                <li class="list-group-item"><a href="admin-Accounting.html">奉獻管理</a> </li>
+                <li class="list-group-item"><a href="admin-schedule.html">行事曆管理</a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-8">
+            <table class="table ActivityTbl">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">奉獻項目</th>
+                    
+                    <th scope="col">姓名</th>
+                    <th scope="col">奉獻金額</th>
+                    <th scope="col">建立日期</th>
+                    <th scope="col">修改日期</th>
+                    <th scope="col">編輯</th>
+                  </tr>
+                </thead>
+                <tbody>
 
-                
-    
-                <Button class="btn btn-outline-primary">
-                    儲存
-                </Button>
+                </tbody>
+              </table>
+        </div>
+        <div class="col">
             
-
-            </div>
-
-     
         </div>
-
-
-        <div class="col">
-
-        </div>
-
-
     </div>
 </div>
 
 
+ 
 
+
+
+ <!-- Modal -->
+<div class="modal fade" id="AddActivity" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">新增奉獻</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">奉獻名稱:</label>
+            <input type="text" class="form-control" id="pay-name">
+          </div>
+
+
+          <!-- <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">奉獻類型:</label>
+            <select class="form-select form-select-lg mb-3" id="activity-type" aria-label=".form-select-lg example">
+              <option selected>==請選擇類型==</option>
+              <option value="1">教會活動</option>
+              <option value="2">講者資訊</option>
+              <option value="3">最新資訊</option>
+            </select>
+          </div> -->
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">奉獻金額:</label>
+            <input type="text" class="form-control" id="pay-money">
+          </div>
+          <!-- <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">活動日期:</label>
+            <input type="text" id="datepicker">
+          </div> -->
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">備註:</label>
+            <input type="text" class="form-control" id="pay-note">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">其他事項:</label>
+            <textarea class="form-control" id="pay-other"></textarea>
+          </div>
+        </form>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary sample-pay" >套用範本</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary postPayment">發布</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<script src="./assets/js/login.js"></script>
+<!-- <script src="./assets/js/article.js"></script> -->
+<script src="./assets/js/ChurchActivity-list.js"></script>
+
+<script>
+
+  $(function(){
+    renderPayList();
+    $(".sample-pay").on('click',function(){
+      $("#pay-name").val("陳先生");
+      $("#pay-money").val("2000");
+      $("#pay-context").val("內容")
+      $("#pay-note").val("備註")
+
+    })
+ 
+  })
+
+ 
+</script>

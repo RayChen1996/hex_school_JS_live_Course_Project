@@ -25,4 +25,28 @@ $(".postArticle").on("click",function(){
 })
 
 
+$(".postPayment").on("click",function(){
+   
+    axios.post(`${BaseURl}Dedication`,{
+        Name: $("#pay-name").val(),
+        SCH_DATE:$("#pay-money").val(),
+        note: $("#pay-context").val(),
+        title:$("#pay-name").val(),
+        Money:$("#pay-money").val()
+    })
+        .then( (response) => {
+            console.log(response.data)
+
+            Swal.fire({
+                title: ` 新增成功!`,
+                text: '',
+                icon: 'success',
+                confirmButtonText: 'OK'
+              })
+        })
+        .catch( (error) => {
+            console.log(error)
+        })
+})
+
 $('#datepicker').datepicker();

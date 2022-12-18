@@ -1,43 +1,90 @@
 let strHTML = '';//迴圈暫存字串變數
 let ActivityData = []
-function ActivityListInit(){ 
+function ActivityListInit(tag){ 
     axios.get(`${BaseURl}Abouts`).then(function(response){
-        ActivityRender(response.data)
-        ActivityData = response.data
+        if(tag==undefined){
+            ActivityRender(response.data)            
+            ActivityData = response.data
+        }else{
+            const result = ActivityData.filter((el)=> el.tag == tag )
+            ActivityRender(result)   
+        }
     });
     function ActivityRender(aryData){ 
-        const List = document.querySelector(".Activity")
-        aryData.forEach(o=>{
+        const List = document.querySelector("#shop")
+    
+        aryData.forEach((p,idx) =>{
+             strHTML += `        
 
-             strHTML += `
-                <div class="col">
+                <div id="keyBoard" class="col-md-4 mt-2">
                     <div class="card" style="width: 18rem;">
-                    <img src="${o.Photo}" class="card-img-top" alt="" >
-                    <div class="card-body">
-                        <h5 class="card-title">${o.Title}
-                        ${o.tag=='最新活動'?"<span class='badge bg-danger'>New</span>":""}
-                        
-                        
-                        </h5>
-                        <p class="card-text">${o.SubTitle}</p>
-                        <a href="#" onclick='viewDetailActivity(${o.id})' class="btn btn-primary">查看</a>
-                    </div>
+                        <img src="${p.Photo}" class="card-img-top img-fluid" alt="keyboard">
+                        <div class="card-body">
+                            <h5 class="card-title" id="itemName">${p.Title}
+                            ${p.tag=='最新資訊'?"<span class='badge bg-danger'>New</span>":""}
+                            </h5>
+                            <p class="card-text" id="itemDesc">${p.SubTitle}</p>
+                         
+                            <a href="#" onclick='viewDetailActivity(${p.id})'  class="btn btn-primary" id="addCart">查看</a>
+                            ${p.tag=='最新資訊'?"<a href='#' onclick='viewDetailActivity(${p.id})'  class='btn btn-outline-primary' id='gotoCart>報名！</a>":""}
+                        </div>
                     </div>
                 </div>
+
+
              `
-
         });
-      
+        List.innerHTML = strHTML
 
+        
+    }
+}
+
+function ShowFilterResult(tag){
+    let result = []
+    if(tag==="all"){
+        result = ActivityData
+    }else{
+        result = ActivityData.filter((el)=> el.tag == tag )
+    }
+    
+    strHTML = ""
+    ActivityRender(result)
+ 
+    function ActivityRender(aryData){ 
+        console.log(aryData)
+        const List = document.querySelector("#shop")
+  
+        aryData.forEach(p=>{
+             strHTML += `            
+                <div id="keyBoard" class="col-md-4 mt-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="${p.Photo}" class="card-img-top img-fluid" alt="keyboard">
+                        <div class="card-body">
+                            <h5 class="card-title" id="itemName">${p.Title}
+                            ${p.tag=='最新資訊'?"<span class='badge bg-danger'>New</span>":""}
+                            </h5>
+                            <p class="card-text" id="itemDesc">${p.SubTitle}</p>
+                        
+                            <a href="#" onclick='viewDetailActivity(${p.id})'  class="btn btn-primary" id="addCart">查看活動</a>
+                            ${p.tag=='最新資訊'?"<button type=button onclick=viewDetailActivity(${p.id})  class='btn btn-success'>立即報名！</button>":""}
+
+                        </div>
+                    </div>
+                </div>
+          
+             `
+        });
         List.innerHTML = strHTML
     }
+
 }
 
 ActivityListInit();
 
 
 function viewDetailActivity(Id){
- 
+  console.log(Id)
   const result = ActivityData.filter(obj => obj.id === Id) ;
   result.forEach((item)=>{
       Swal.fire({
@@ -54,12 +101,15 @@ function viewDetailActivity(Id){
           imageUrl: ''+item.Photo,
           imageWidth: 400,
           imageHeight: 200,
+          confirmButtonText:"確定",
           imageAlt: 'Custom image',
       })
 
   })
 }
 
+
+//管理者頁面
 function renderActivityList(){
     strHTML = ""
     axios.get(`${BaseURl}Abouts`).then(function(response){
@@ -80,6 +130,44 @@ function renderActivityList(){
                 <td>${o.SubTitle}</td>
                 <td>${o.CreateDateTime}</td>
                 <td>${o.EditDateTime}</td>
+                <td>                       
+                    <button class="btn btn-info" onclick='EditActivity(${o.id})'  >編輯</button> | 
+                    <button class="btn btn-danger" onclick='DelActivity(${o.id})' >刪除</button></td>
+            </tr>
+
+             `
+
+        });
+      
+
+        List.innerHTML = strHTML
+    }
+
+}
+
+
+
+function renderPayList(){
+    strHTML = ""
+    axios.get(`${BaseURl}Dedication`).then(function(response){
+        console.log(response.data)
+        ActivityRender(response.data)
+        ActivityData =  response.data
+    });
+
+    function ActivityRender(aryData){ 
+        const List = document.querySelector(".ActivityTbl tbody")
+        aryData.forEach(o=>{
+             strHTML += `
+             <tr>
+                <th scope="row">${o.id}</th>
+                <td>${o.title}</td>
+                
+
+                <td>${o.Name}</td>
+                <td>${o.Money}</td>
+                <td></td>
+                <td></td>
                 <td>                       
                     <button class="btn btn-info" onclick='EditActivity(${o.id})'  >編輯</button> | 
                     <button class="btn btn-danger" onclick='DelActivity(${o.id})' >刪除</button></td>
@@ -176,11 +264,13 @@ function EditActivity(id){
 
 function DelActivity(id){ 
 
-    Swal.fire(
-        'The Internet?',
-        'That thing is still around?',
-        'question'
-      ).then((result) => {
+    Swal.fire({
+        icon: 'error',
+        title: '確認刪除?',
+        text: '',
+        confirmButtonText:
+        '確定',
+    }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
 
@@ -216,3 +306,4 @@ function DelActivity(id){
 
 
 }
+

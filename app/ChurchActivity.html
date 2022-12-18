@@ -9,89 +9,80 @@ current: index
  
 
 
-<div class="container mt-5 mb-5 ">
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+<div class="container ">
+    <!-- <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"> -->
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
         <li class="breadcrumb-item active" aria-current="page">教會活動</li>
     </ol>
-    </nav>
+    <!-- </nav> -->
 </div>
+ 
 
-
+ 
 
 
 <div class="container">
-    <div class="row  g-5 Activity">
-        <!-- <div class="col">
-            <div class="card" style="width: 18rem;">
-            <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E5%9B%9B%E6%96%B9%E6%95%99%E6%9C%83%E9%84%AD%E5%95%9F%E8%AC%80%E7%89%A7%E5%B8%AB%E4%BE%86%E8%A8%AA_221127.jpg?raw=true" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">國外講者來訪</h5>
-                <p class="card-text">馬來西亞四方教會鄭啟謀牧師來訪</p>
-                <a href="#" class="btn btn-primary">查看</a>
-            </div>
-            </div>
-        </div>
+    <div class="row">
+  
         <div class="col">
-            <div class="card" style="width: 18rem;">
-            <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E5%9B%9B%E6%96%B9%E6%95%99%E6%9C%83%E9%84%AD%E5%95%9F%E8%AC%80%E7%89%A7%E5%B8%AB%E4%BE%86%E8%A8%AA_221127.jpg?raw=true" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">國外講者來訪</h5>
-                <p class="card-text">馬來西亞四方教會鄭啟謀牧師來訪</p>
-                <a href="#" class="btn btn-primary">查看</a>
-            </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-            <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E5%9B%9B%E6%96%B9%E6%95%99%E6%9C%83%E9%84%AD%E5%95%9F%E8%AC%80%E7%89%A7%E5%B8%AB%E4%BE%86%E8%A8%AA_221127.jpg?raw=true" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">國外講者來訪</h5>
-                <p class="card-text">馬來西亞四方教會鄭啟謀牧師來訪</p>
-                <a href="#" class="btn btn-primary">查看</a>
-            </div>
-            </div>
-        </div>    
+            <span>選擇類別</span>
+            <select id="ActivityFilter" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>==請選擇==</option>
+                <option value="1">最新資訊</option>
+                <option value="2">教會活動</option>
+                <option value="3">講者資訊</option>
         
-        
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-            <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E5%9B%9B%E6%96%B9%E6%95%99%E6%9C%83%E9%84%AD%E5%95%9F%E8%AC%80%E7%89%A7%E5%B8%AB%E4%BE%86%E8%A8%AA_221127.jpg?raw=true" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">國外講者來訪</h5>
-                <p class="card-text">馬來西亞四方教會鄭啟謀牧師來訪</p>
-                <a href="#" class="btn btn-primary">查看</a>
-            </div>
-            </div>
+            </select>
         </div>
-
-
-
         <div class="col">
-            <div class="card" style="width: 18rem;">
-            <img src="https://github.com/RayChen1996/js_hex_project-seed-church/blob/main/img/LINE_ALBUM_%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E5%9B%9B%E6%96%B9%E6%95%99%E6%9C%83%E9%84%AD%E5%95%9F%E8%AC%80%E7%89%A7%E5%B8%AB%E4%BE%86%E8%A8%AA_221127.jpg?raw=true" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">國外講者來訪</h5>
-                <p class="card-text">馬來西亞四方教會鄭啟謀牧師來訪</p>
-                <a href="#" class="btn btn-primary">查看</a>
-            </div>
-            </div>
-        </div> -->
 
-
-
-
-
-
+        </div>
     </div>
 </div>
+
+
+<div class="container Activity">
+    <div class="row" id="shop">
+        
+    </div>
+</div>
+
+ 
   <!-- my js -->
-  <script type="javascript" src="assets/js/ChurchActivity-list.js"></script>
+<script type="javascript" src="assets/js/ChurchActivity-list.js"></script>
 
 <script>
     $(function(){
         ActivityListInit();
-    })
+        setTimeout(function(){
+                ShowFilterResult("all");
+        },1000);
+        
+
+        $("#ActivityFilter").on('change',function(){
     
+            let filterText = $("#ActivityFilter").val()
+ 
+            if(filterText==="==請選擇==") {
+                ShowFilterResult("all")
+            }else{
+                if(filterText==="1"){
+                    ShowFilterResult("最新資訊")
+                }else if(filterText==="2"){
+                    ShowFilterResult("教會活動")
+                }else {
+                    ShowFilterResult("講者資訊")
+                }                
+            }
+      
+
+            
+
+
+
+        })
+
+    })
+
 </script>
